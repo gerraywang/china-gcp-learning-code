@@ -38,7 +38,7 @@ steps:
       dt=$(date +%Y%m%d%H%M%S)
       set -x && \
       git config --global user.email $_GITHUB_EMAIL && \
-      git config --global user.name $_GITUB_NAME && \
+      git config --global user.name $_GITHUB_NAME && \
       git checkout -b "release${dt}" && \
       sed -i "s/tag\:\s[a-z0-9]*/tag: $COMMIT_SHA/" values.yaml && \
       git add values.yaml && \
